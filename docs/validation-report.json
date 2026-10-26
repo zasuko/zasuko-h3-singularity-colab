@@ -1,0 +1,28 @@
+{
+  "original_unchanged": true,
+  "source_sha256": "88828eca57c953c442a707f98602d50dc4da5a49368c4351ea955cf62b59f636",
+  "results": [
+    {
+      "notebook": "Singularity_V2_NewVAE_Colab_Driveless.ipynb",
+      "sha256": "eec473e3b97338dc8007fd3a6837b9b2c9914bd3106b53d244e46a672cd22eab",
+      "model": "Minimax-h3_Singularity_ref2va_v2_pruned_int8.safetensors",
+      "model_url": "https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity/resolve/1259cf16cd0b655ba691a32fb46a409142762972/Minimax-h3_Singularity_ref2va_v2_pruned_int8.safetensors",
+      "model_sha256": "d7637c2c35cd30facd9e93778c491f6d82f91c4a441aecbdb4c384a62a5f3d9f",
+      "workflows_checked": 4,
+      "syntax": "PASS (Colab magic lines replaced for parse only; no installation or generation)",
+      "graph_connections": "PASS",
+      "colab_execution": "NOT TESTED"
+    },
+    {
+      "notebook": "Singularity_V1_3_NewVAE_Colab_Driveless.ipynb",
+      "sha256": "d3135e71adb70d5296322665c28b77388ab4bac16d446bf51127bc41725156b8",
+      "model": "Minimax-h3_Singularity_ref2va_Pruned_v1.3_int8.safetensors",
+      "model_url": "https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity/resolve/1259cf16cd0b655ba691a32fb46a409142762972/Minimax-h3_Singularity_ref2va_Pruned_v1.3_int8.safetensors",
+      "model_sha256": "412a7b126595a958964193f3b42513d7cf2df4196ef04223a0f05e3622949cce",
+      "workflows_checked": 4,
+      "syntax": "PASS (Colab magic lines replaced for parse only; no installation or generation)",
+      "graph_connections": "PASS",
+      "colab_execution": "NOT TESTED"
+    }
+  ]
+}

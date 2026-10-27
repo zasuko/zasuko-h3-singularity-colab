@@ -1,4 +1,6 @@
-# Singularity Colab：V2 / v1.3＋新VAE
+# Singularity Colab：V2 / v1.3＋INT8映像VAE（int8_convrot）
+
+映像VAEは Comfy-Org/MiniMax-H3 が2026-09-15に公開した `minimax_h3_video_vae_int8_convrot.safetensors` です（ファイル名やワークフロー名の「NewVAE」はこれを指します）。
 
 ざすこ（道草 雑草子）が用意した、MiniMax H3系 **Singularity V2** と **Singularity v1.3** 用のGoogle Colab Notebookです。
 
@@ -8,8 +10,8 @@
 
 | モデル | 保存方式 | 起動 |
 |---|---|---|
-| Singularity V2＋新INT8映像VAE | Driveレス・Colab一時ディスクへ取得 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zasuko/zasuko-h3-singularity-colab/blob/main/notebooks/Singularity_V2_NewVAE_Colab_Driveless.ipynb) |
-| Singularity v1.3＋新INT8映像VAE | Driveレス・Colab一時ディスクへ取得 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zasuko/zasuko-h3-singularity-colab/blob/main/notebooks/Singularity_V1_3_NewVAE_Colab_Driveless.ipynb) |
+| Singularity V2＋INT8映像VAE | Driveレス・Colab一時ディスクへ取得 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zasuko/zasuko-h3-singularity-colab/blob/main/notebooks/Singularity_V2_NewVAE_Colab_Driveless.ipynb) |
+| Singularity v1.3＋INT8映像VAE | Driveレス・Colab一時ディスクへ取得 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zasuko/zasuko-h3-singularity-colab/blob/main/notebooks/Singularity_V1_3_NewVAE_Colab_Driveless.ipynb) |
 
 **検証範囲：Notebook構文と同梱8ワークフローの設定・接続をローカル検査済み。Colabでのインストール・接続・実際の動画生成は未検証です。** ローカルの別環境での比較実績を、Colabでの動作・速度保証へ転用しません。
 
@@ -17,7 +19,7 @@
 
 1. モデルの利用地域・用途と、Colabの契約・計算単位残高を確認します。H3のCommunity Licenseは **EU・英国・韓国・米国を適用対象から除外**しています。日本からのアクセスだけでColabの実行先も日本になるとは判断できません。必要な条件や許諾が確認できる環境で使用してください。
 2. 上のボタンでNotebookをひらき、新しいGPUランタイムを選びます。約24GB以上のGPUメモリを想定し、22GiB未満とT4は停止します。より大きなメモリを持つGPUでも成功を保証するものではありません。
-3. Colab左の鍵マークで `PINGGY_TOKEN` を登録し、Notebookからのアクセスを許可します。接続は `pro.pinggy.io` を使用するので、対応するPinggyトークンと契約を確認してください。
+3. Pinggyの有料トークンがあれば、Colab左の鍵マークで `PINGGY_TOKEN` を登録し、Notebookからのアクセスを許可します（`pro.pinggy.io` で時間制限なし）。トークンが無い場合や、Notebookの「Pinggyの有料トークンを使う」をオフにした場合は、無料のPinggyで1回60分まで接続します。
 4. 起動セルを実行し、ログに出るComfyUI接続ボタンへ進みます。
 5. User workflows > `Singularity_V2_NewVAE` または `Singularity_V1_3_NewVAE` の `r2v_app` を選び、まず0.4MP・5秒・参照画像1枚から試します。
 6. 動画をPCへ保存します。Driveレスの初期設定では、Colabのランタイム終了でモデルと出力が消えます。Driveへの出力保存・モデル再利用はNotebook内で任意設定できます。
